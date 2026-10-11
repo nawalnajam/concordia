@@ -1,0 +1,95 @@
+/* ================= STATS BANNER SECTION ================= */
+.stats-banner {
+  width: 100%;
+  
+  /* 1. Fallback color in case image fails to load */
+  background-color: #0a1e40; 
+  
+  /* 2. Background Image + Dark Blue Overlay
+     Neeche di gayi image ek study group ki hai. 
+     rgba(10, 30, 64, 0.8) ka matlab hai 80% dark blue overlay, 20% image visibility. */
+  background-image: 
+    linear-gradient(rgba(10, 30, 64, 0.8), rgba(10, 30, 64, 0.8)), 
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  
+  /* 3. Image ko horizontally splash karne ke liye */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* 4. Parallax effect (optional - scroll karte waqt image fix rahegi) */
+  background-attachment: fixed; 
+  
+
+  padding: 100px 5%;
+}
+
+.stats-overlay {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.stat-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-underline {
+  width: 50px;
+  height: 3px;
+  background-color: #e69119; /* Orange accent line */
+  margin-top: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 968px) {
+  .stats-container {
+    justify-content: center;
+  }
+  .stat-item {
+    flex: 0 0 40%; /* 2 items per row */
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .stat-underline {
+    margin: 15px auto 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .stat-item {
+    flex: 0 0 100%; /* 1 item per row */
+  }
+  .stat-number {
+    font-size: 3.5rem;
+  }
+}

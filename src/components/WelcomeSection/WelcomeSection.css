@@ -1,0 +1,92 @@
+/* ================= WELCOME SECTION ================= */
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 5%; /* Generous padding to match the airy look in the image */
+  background-color: #ffffff;
+  gap: 60px; /* Space between text and image */
+}
+
+/* Left Side: Content */
+.welcome-content {
+  flex: 1;
+  max-width: 55%; /* Takes up a little more than half the space */
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a1e40; /* Dark Navy matching the theme */
+  margin-bottom: 25px;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  color: #555555; /* Slightly darker gray for readability */
+  line-height: 1.7;
+  margin-bottom: 35px;
+  text-align: justify; /* Makes the text block look neat like in the image */
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #e69119; /* Concordia Orange */
+  color: #ffffff;
+  padding: 14px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(230, 145, 25, 0.3);
+}
+
+.read-more-btn:hover {
+  background-color: #c97a10; /* Darker orange on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Right Side: Image */
+.welcome-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.welcome-image {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 968px) {
+  .welcome-section {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    padding: 60px 5%;
+    gap: 40px;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+    text-align: center; /* Center text on mobile */
+  }
+
+  .welcome-text {
+    text-align: center; /* Remove justify on mobile for better readability */
+  }
+
+  .welcome-image-container {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+}

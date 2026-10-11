@@ -1,0 +1,170 @@
+/* ================= FACULTY SHOWCASE SECTION ================= */
+.faculty-showcase-section {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 400px; /* Exact height matching the screenshot */
+  display: flex;
+  overflow: hidden;
+  background-color: #0a1e40; /* Fallback color */
+}
+
+/* ================= NAVIGATION ARROWS ================= */
+.faculty-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 15px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faculty-nav-btn:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+/* ================= SLIDE CONTAINER ================= */
+.faculty-slide-container {
+  display: flex;
+  width: 100%;
+  height: 100%; /* Fills the 400px height */
+}
+
+/* Fade animation for slide change */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* ================= LEFT SIDE: TEXT ================= */
+.faculty-text-content {
+  flex: 1; /* Takes exactly 50% of the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 8%;
+  color: #ffffff;
+}
+
+.faculty-text-content h2 {
+  font-size: 2.6rem; /* Large text to match image */
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.faculty-text-content p {
+  font-size: 1rem; 
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #f3f4f6; 
+}
+
+.faculty-read-more-btn {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faculty-read-more-btn:hover {
+  background-color: #e69119; /* Orange on hover */
+  color: #ffffff;
+}
+
+/* ================= RIGHT SIDE: IMAGE GRID ================= */
+.faculty-image-grid {
+  flex: 1; /* Takes exactly 50% of the width */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0; /* No gaps between images */
+}
+
+.grid-top {
+  grid-column: span 2; /* Top image spans both columns */
+  overflow: hidden;
+}
+
+.grid-bottom-left {
+  overflow: hidden;
+}
+
+.grid-bottom-right {
+  overflow: hidden;
+}
+
+.faculty-image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the space without stretching */
+  display: block;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 968px) {
+  .faculty-showcase-section {
+    height: auto; /* Height becomes flexible on mobile */
+    min-height: 600px;
+  }
+
+  .faculty-slide-container {
+    flex-direction: column; /* Stack text and images vertically */
+  }
+  
+  .faculty-text-content {
+    padding: 40px 5%;
+  }
+
+  .faculty-text-content h2 {
+    font-size: 2rem;
+  }
+
+  .faculty-image-grid {
+    height: 300px; /* Fixed height for image grid on mobile */
+  }
+  
+  /* Center arrows at the bottom on mobile */
+  .faculty-nav-btn {
+    top: auto;
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.4); 
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transform: none; 
+  }
+  
+  .left-arrow { left: 20px; }
+  .right-arrow { right: 20px; }
+  
+  .faculty-nav-btn:hover { transform: scale(1.1); }
+}

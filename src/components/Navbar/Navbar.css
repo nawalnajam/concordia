@@ -1,0 +1,367 @@
+/* ================= BASE STYLES ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background-color: #e69119; /* Concordia Orange */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.top-bar-left .icon-phone {
+  font-size: 16px;
+}
+
+.phone-numbers {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* WhatsApp Button in Top Bar */
+.top-whatsapp-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.top-whatsapp-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.top-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.top-link:hover {
+  opacity: 0.85;
+}
+
+.arrow {
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+.icon-home {
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.icon-home:hover {
+  opacity: 0.8;
+}
+
+/* Home Icon Link (Top Bar) */
+.home-icon-link {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* ================= TOP BAR DROPDOWN ================= */
+.top-bar .dropdown-container {
+  position: relative;
+}
+
+.nav-link-text-top {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link-text-top:hover {
+  opacity: 0.85;
+}
+
+.dropdown-menu-top {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  background-color: #ffffff;
+  min-width: 230px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 10px 0;
+  border-top: 3px solid #e69119;
+  border-radius: 0 0 6px 6px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.top-bar .dropdown-container:hover .dropdown-menu-top {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Invisible bridge - prevents dropdown from closing when moving mouse */
+.dropdown-menu-top::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.dropdown-menu-top li {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-menu-top a {
+  display: block;
+  padding: 11px 22px;
+  color: #0a1e40;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.dropdown-menu-top a:hover {
+  background-color: #f8f9fa;
+  color: #e69119;
+  padding-left: 28px;
+}
+
+/* ================= MAIN NAVBAR ================= */
+.main-navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Section */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text-main {
+  color: #0a1e40;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.logo-text-sub {
+  color: #0a1e40;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-top: 3px;
+}
+
+.logo-text-tagline {
+  color: #0a1e40;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* ================= MAIN NAVIGATION LINKS ================= */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 16px 25px;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-text {
+  color: #0a1e40;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:hover .nav-link-text {
+  color: #e69119;
+}
+
+/* ================= MAIN NAV DROPDOWN ================= */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  border-top: 3px solid #e69119;
+  border-radius: 0 0 4px 4px;
+  z-index: 100;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Invisible bridge */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #0a1e40;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #e69119;
+  padding-left: 25px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 1024px) {
+  .main-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .top-bar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 12px 20px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-menu-top {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-numbers {
+    font-size: 12px;
+  }
+
+  .top-whatsapp-link {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .nav-link-text {
+    font-size: 14px;
+  }
+}

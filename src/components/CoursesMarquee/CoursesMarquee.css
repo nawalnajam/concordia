@@ -1,0 +1,70 @@
+/* ================= COURSES MARQUEE (Infinite Horizontal Scroll) ================= */
+.courses-marquee-wrapper {
+  width: 100%;
+  background-color: #0a1e40; /* Dark Navy matching the theme */
+  padding: 18px 0;
+  overflow: hidden; /* Ensures items outside the box are hidden */
+  position: relative;
+  border-top: 3px solid #e69119; /* Orange top border */
+  border-bottom: 3px solid #e69119;
+}
+
+.courses-marquee-track {
+  display: flex;
+  width: max-content; /* Width adjusts based on content */
+  animation: scrollMarquee 40s linear infinite; /* Continuously scrolls */
+}
+
+/* Pause on hover - User experience ke liye */
+.courses-marquee-wrapper:hover .courses-marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0 25px;
+  white-space: nowrap; /* Text ko ek line mein rakhta hai */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.marquee-item:hover {
+  color: #e69119; /* Orange on hover */
+}
+
+.marquee-separator {
+  color: #e69119; /* Orange star separator */
+  margin-left: 25px;
+  font-size: 1rem;
+}
+
+/* The Magic: Infinite scroll keyframe */
+@keyframes scrollMarquee {
+  from {
+    transform: translateX(0); /* Starts at 0 */
+  }
+  to {
+    /* -50% ka matlab hai ke poori list aadhi ho gayi, phir doobara shuru ho jayega */
+    /* Yeh trick infinite loop banati hai */
+    transform: translateX(-50%); 
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .marquee-item {
+    font-size: 0.95rem;
+    padding: 0 18px;
+  }
+  
+  .marquee-separator {
+    margin-left: 18px;
+  }
+  
+  .courses-marquee-track {
+    animation: scrollMarquee 30s linear infinite; /* Mobile par tez chalega */
+  }
+}

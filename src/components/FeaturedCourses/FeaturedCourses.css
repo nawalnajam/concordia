@@ -1,0 +1,182 @@
+/* ================= FEATURED COURSES SECTION ================= */
+.featured-courses-section {
+  background-color: #e5e7eb; /* Light gray background */
+  padding: 60px 5%;
+  width: 100%;
+  overflow: hidden; /* Prevents the whole page from scrolling horizontally */
+}
+
+/* Header Area */
+.fc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.fc-header-text {
+  max-width: 80%;
+}
+
+.fc-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111827; /* Dark text */
+  margin-bottom: 15px;
+}
+
+.fc-description, .fc-subdescription {
+  font-size: 1rem;
+  color: #374151; /* Gray text */
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+/* Navigation Buttons (Top Right Arrows) */
+.fc-nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.fc-nav-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.fc-nav-btn.prev {
+  background-color: #0a1e40; /* Dark Navy */
+  color: #ffffff;
+}
+.fc-nav-btn.prev:hover {
+  background-color: #07152c;
+}
+
+.fc-nav-btn.next {
+  background-color: #e69119; /* Orange */
+  color: #ffffff;
+}
+.fc-nav-btn.next:hover {
+  background-color: #c97a10;
+}
+
+/* ================= CARDS LAYOUT ================= */
+.fc-cards-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  padding-bottom: 20px; /* Space for hover shadows */
+  scroll-behavior: smooth; /* Smooth scrolling for auto-slide */
+  
+  /* Hide the ugly scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.fc-cards-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Individual Card */
+.fc-card {
+  background-color: #ffffff;
+  min-width: 300px; /* Prevents cards from squishing */
+  width: 300px; /* Fixed width ensures consistent scrolling */
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fc-card:hover {
+  transform: translateY(-5px); /* Lifts up on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fc-card-image-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.fc-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.fc-card:hover .fc-card-image {
+  transform: scale(1.05); /* Subtle zoom effect on image */
+}
+
+.fc-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fc-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Program List inside Card */
+.fc-program-list {
+  list-style-type: disc; 
+  padding-left: 20px;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.fc-program-list li {
+  margin-bottom: 8px;
+}
+
+/* ================= MOBILE & TABLET RESPONSIVE ================= */
+.fc-mobile-read-more {
+  display: none; /* Hidden by default */
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  color: #e69119;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 968px) {
+  .fc-header {
+    flex-direction: column;
+  }
+  .fc-header-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .fc-nav-buttons {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .fc-nav-buttons {
+    display: none; /* Hide arrows on small screens */
+  }
+  .fc-mobile-read-more {
+    display: flex; /* Show 'Read More' on small screens */
+  }
+}
