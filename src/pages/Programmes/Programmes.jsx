@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FaGraduationCap, FaFlask, FaLaptopCode, FaPalette, FaCut, FaHeartbeat, FaBook, FaGlobe, FaBriefcase } from 'react-icons/fa';
+import { FaGraduationCap, FaFlask, FaLaptopCode, FaPalette,FaHeartbeat, FaBook, FaGlobe, FaBriefcase } from 'react-icons/fa';
 import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import '../../styles/SharedPage.css';
 import './Programmes.css';

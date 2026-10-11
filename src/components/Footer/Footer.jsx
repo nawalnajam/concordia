@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // 1. Import Link
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaChevronUp, FaWhatsapp } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaFacebookF,FaChevronUp, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {

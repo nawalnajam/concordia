@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLaptopCode, FaBook, FaFutbol, FaUtensils, FaUserMd, FaPrayingHands, FaBus, FaWifi, FaFlask, FaMicrophone } from 'react-icons/fa';
+import { FaLaptopCode, FaBook, FaFutbol, FaUtensils, FaUserMd, FaPrayingHands,FaWifi, FaFlask, FaMicrophone } from 'react-icons/fa';
 import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import '../../styles/SharedPage.css';
 import './Facilities.css';

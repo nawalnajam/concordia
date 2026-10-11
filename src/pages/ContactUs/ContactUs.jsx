@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaWhatsapp, FaFacebookF, FaLinkedinIn, FaInstagram, FaCheckCircle } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt,FaClock, FaWhatsapp, FaFacebookF,FaCheckCircle } from 'react-icons/fa';
 import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import './Contact.css';
 
@@ -133,7 +133,6 @@ const ContactUs = () => {
                 >
                   <FaWhatsapp />
                 </a>
-               
               
               </div>
             </div>
